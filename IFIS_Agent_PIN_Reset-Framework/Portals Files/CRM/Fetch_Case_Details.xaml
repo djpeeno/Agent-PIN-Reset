@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>496,1002.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>496,962.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Fetch_Case_Details_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -74,7 +74,6 @@
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="CRMID" />
               <Variable x:TypeArguments="x:Boolean" Name="ChangesTo_Page" />
-              <Variable x:TypeArguments="x:String" Name="variable1" />
               <Variable x:TypeArguments="x:Boolean" Name="Dynamics365_Error" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>

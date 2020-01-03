@@ -203,7 +203,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="231.333333333333,148.666666666667" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="485.333333333333,1015.33333333333" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <TryCatch DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="438.666666666667,542" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                   <sap:WorkflowViewStateService.ViewState>
@@ -426,14 +426,14 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke OpenCRM workflow" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Portals Files\CRM\OpenCRM.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Open CRM " sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Portals Files\CRM\OpenCRM.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_PINReset_Cases">[PINReset_Cases]</OutArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="CRM_URL" />
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
                                     </Sequence>
-                                    <Assign sap:VirtualizedContainerService.HintSize="436.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                    <Assign DisplayName="Filter CRM Cases for QTPaypoint" sap:VirtualizedContainerService.HintSize="436.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_22">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="sd:DataRow[]">[IFIS_Filtered_Cases]</OutArgument>
                                       </Assign.To>
@@ -441,7 +441,7 @@
                                         <InArgument x:TypeArguments="sd:DataRow[]">[PINReset_Cases.Select("[Issue Product]='Quickteller Paypoint'")]</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <ui:WriteTextFile DisplayName="Write Text File" FileName="C:\Users\Sola.Ajisafe\Desktop\IFIS_Filtered_Cases.txt" sap:VirtualizedContainerService.HintSize="436.666666666667,134.666666666667" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[IFIS_Filtered_Cases.Count.ToString]" />
+                                    <ui:WriteTextFile DisplayName="Write Case_Count to Text File as a Check ONLY" FileName="C:\Users\Sola.Ajisafe\Desktop\IFIS_Filtered_Cases.txt" sap:VirtualizedContainerService.HintSize="436.666666666667,134.666666666667" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[IFIS_Filtered_Cases.Count.ToString]" />
                                     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.666666666667,221.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                                       <ui:CommentOut.Body>
                                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,142.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_24">
@@ -668,7 +668,7 @@
       <Variable x:TypeArguments="sd:DataRow" Name="TransactionItem" />
       <Variable x:TypeArguments="s:Exception" Name="SystemError" />
       <Variable x:TypeArguments="ui:BusinessRuleException" Name="BusinessRuleException" />
-      <Variable x:TypeArguments="x:Int32" Default="1" Name="TransactionNumber" />
+      <Variable x:TypeArguments="x:Int32" Default="2" Name="TransactionNumber" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="RetryNumber" />
       <Variable x:TypeArguments="x:String" Name="TransactionField2" />
