@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>496,429.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>618.666666666667,2534</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>OpenCRM_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -266,7 +266,7 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1cf8c8d6917e03b13af4ebf564d4c1e5" Selector="&lt;html title='Cases My Active Cases - Microsoft Dynamics 365' /&gt;&lt;webctrl parentid='{D00DE60F-7F12-EA11-8106-CE5B59FCFE61}' tag='NOBR' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1cf8c8d6917e03b13af4ebf564d4c1e5" Selector="&lt;html title='* - Microsoft Dynamics 365' /&gt;&lt;webctrl parentid='{D00DE60F-7F12-EA11-8106-CE5B59FCFE61}' tag='NOBR' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
