@@ -67,8 +67,9 @@
     <ui:LogMessage DisplayName="Log App Initialization message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Opening Inclusion Portal.&quot;]" />
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke IFISLogin workflow" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Portals Files\IFIS\IFISLogin.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="IFIS_Portal_URL" />
         <InArgument x:TypeArguments="x:String" x:Key="IFIS_Credential" />
+        <InArgument x:TypeArguments="x:String" x:Key="Gemalto_URL" />
+        <OutArgument x:TypeArguments="x:String" x:Key="IFIS_URL" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
