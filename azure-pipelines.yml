@@ -1,0 +1,14 @@
+trigger:
+- master
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- task: UiPathPack@2
+  inputs:
+    versionType: 'AutoVersion'
+    projectJsonPath: '$(Build.SourcesDirectories) \project.json'
+    orchestratorConnection: 'Cloud Orchestrator'
+    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    traceLevel: 'Information'
